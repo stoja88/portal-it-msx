@@ -1,0 +1,428 @@
+/* Custom CSS for MSX International IT Portal */
+
+:root {
+    --primary-color: #4F63D2;
+    --secondary-color: #4CAF50;
+    --accent-color: #FF6B6B;
+    --warning-color: #FFA726;
+    --info-color: #29B6F6;
+    --success-color: #66BB6A;
+    --gradient-start: #667eea;
+    --gradient-end: #764ba2;
+    --text-dark: #2C3E50;
+    --text-light: #7F8C8D;
+    --bg-light: #F8F9FA;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Logo Styles */
+.logo-circle {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #dc3545, #6f42c1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: lowercase;
+}
+
+.logo-circle-large {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #dc3545, #6f42c1);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin: 0 auto;
+    box-shadow: var(--shadow-lg);
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logo-text-large {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: lowercase;
+    line-height: 1;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    padding: 100px 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+    opacity: 0.3;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #fff, #e3f2fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+/* Service Cards */
+.service-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    height: 100%;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 32px;
+    color: white;
+}
+
+.support-icon {
+    background: linear-gradient(135deg, var(--secondary-color), #45a049);
+}
+
+.access-icon {
+    background: linear-gradient(135deg, var(--primary-color), #3f51b5);
+}
+
+.service-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.service-subtitle {
+    font-size: 18px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.service-description {
+    color: var(--text-light);
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+/* Stats Section */
+.stats-section {
+    background: white;
+    padding: 80px 0;
+    margin: 60px 0;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.stat-card h4 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.stat-card p {
+    color: var(--text-light);
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Admin Panel Styles */
+.admin-header {
+    background: linear-gradient(135deg, var(--primary-color), #3f51b5);
+    color: white;
+    padding: 20px 0;
+}
+
+.admin-nav {
+    background: white;
+    box-shadow: var(--shadow);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.admin-nav .nav-link {
+    color: var(--text-dark);
+    font-weight: 600;
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+}
+
+.admin-nav .nav-link:hover,
+.admin-nav .nav-link.active {
+    color: var(--primary-color);
+    background-color: rgba(79, 99, 210, 0.1);
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+.dashboard-card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.dashboard-card .card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.dashboard-card h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.dashboard-card p {
+    color: var(--text-light);
+    margin: 0;
+    font-size: 14px;
+}
+
+.dashboard-card small {
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+/* Recent Updates */
+.recent-updates {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.update-item {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+}
+
+.update-item:last-child {
+    border-bottom: none;
+}
+
+.update-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 16px;
+    color: white;
+}
+
+.update-content h6 {
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.update-content p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.update-meta {
+    margin-left: auto;
+    text-align: right;
+}
+
+.priority-badge {
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.priority-medium {
+    background-color: rgba(255, 167, 38, 0.2);
+    color: #FF6B35;
+}
+
+.priority-high {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: #F44336;
+}
+
+.status-badge {
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-open {
+    background-color: rgba(33, 150, 243, 0.2);
+    color: #2196F3;
+}
+
+.status-progress {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #FF8F00;
+}
+
+/* Forms */
+.form-control {
+    border: 2px solid #E9ECEF;
+    border-radius: 10px;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(79, 99, 210, 0.25);
+}
+
+.btn {
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-lg {
+    padding: 16px 32px;
+    font-size: 18px;
+}
+
+/* Footer */
+.footer {
+    background: var(--text-dark);
+    color: white;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+/* Utilities */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .service-card {
+        margin-bottom: 30px;
+    }
+    
+    .logo-circle-large {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .logo-text-large {
+        font-size: 24px;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+} 

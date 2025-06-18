@@ -1,0 +1,49 @@
+# Archivos de configuración local
+config-local.php
+.env
+.env.local
+
+# Archivos de logs
+*.log
+logs/
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Directorios de cache
+cache/
+tmp/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (si usas herramientas de build)
+node_modules/
+npm-debug.log*
+
+# Composer (si usas Composer)
+vendor/
+composer.lock
+
+# Archivos de backup
+*.bak
+*.backup
+
+# Archivos de Railway (se generan automáticamente)
+.railway/
+
+# Archivos sensibles
+*.pem
+*.key
+*.crt
+
+# Versión Netlify (ya no necesaria)
+netlify-version/ 
